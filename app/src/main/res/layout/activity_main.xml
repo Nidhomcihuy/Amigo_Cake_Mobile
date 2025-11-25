@@ -1,0 +1,333 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@drawable/bg_cake_pattern"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    &lt;!&ndash; Header &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Form Container &ndash;&gt;-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginBottom="408dp"-->
+<!--        android:background="@drawable/bg_rounded_linear"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/formContainer"-->
+<!--        tools:layout_editor_absoluteX="0dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/header"-->
+<!--            android:layout_width="199dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical"-->
+<!--            android:paddingTop="50dp"-->
+<!--            android:paddingBottom="10dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvHello"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="sans-serif-medium"-->
+<!--                android:text="Hello :) "-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:text="Enter Your Detail to Continue"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:textSize="13sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/logo"-->
+<!--            android:layout_width="154dp"-->
+<!--            android:layout_height="149dp"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:contentDescription="@string/logo_desc"-->
+<!--            android:paddingTop="15dp"-->
+<!--            android:src="@drawable/amigo_logo" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/formContainer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="218dp"-->
+<!--        android:background="#B76E79"-->
+<!--        android:orientation="vertical"-->
+<!--        android:paddingHorizontal="40dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_weight="1">-->
+
+<!--        &lt;!&ndash; Username &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginBottom="15dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingHorizontal="10dp">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:contentDescription="@string/icon_user_desc"-->
+<!--                android:src="@drawable/ic_user"-->
+<!--                app:tint="@android:color/black" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/etUsername"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:autofillHints="username"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:inputType="text"-->
+<!--                android:paddingStart="8dp"-->
+<!--                android:textColor="@android:color/black" />-->
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; Password &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingHorizontal="10dp">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:contentDescription="@string/icon_key_desc"-->
+<!--                android:src="@drawable/ic_key"-->
+<!--                app:tint="@android:color/black" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/etPassword"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:autofillHints="password"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:paddingStart="8dp"-->
+<!--                android:textColor="@android:color/black" />-->
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; Lupa Password &ndash;&gt;-->
+
+<!--        &lt;!&ndash; Tombol Sign In &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvForgot"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:layout_marginTop="6dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:backgroundTint="#FAF6F6"-->
+<!--            android:text="@string/forgot_password"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnSignIn"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="@drawable/btn_gradient_pink"-->
+<!--            android:text="sign_in"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:textSize="16sp" />-->
+<!--    </LinearLayout>-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_cake_pattern"
+    tools:context=".MainActivity">
+
+    <!-- ScrollView agar konten tidak terpotong di layar kecil -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="69dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ========== HEADER SECTION ========== -->
+
+            <!-- ========== FORM SECTION ========== -->
+
+            <LinearLayout
+                android:id="@+id/headerContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/bg_rounded_linear"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/formContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- Text Bagian Kiri -->
+
+                <!-- Logo Bagian Kanan -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvHello"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Hello :)"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Enter Your Detail to Continue"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/amigo_logo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="#B76E79"
+                android:orientation="vertical"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerContainer">
+
+                <!-- Username -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_user"
+                        app:tint="@android:color/black"
+
+                    <EditText
+                        android:id="@+id/etUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Username"
+                        android:paddingStart="8dp"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <!-- Password -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_key"
+                        app:tint="@android:color/black"
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingStart="8dp"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <!-- Forgot Password -->
+                <TextView
+                    android:id="@+id/tvForgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Forgot Password?"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <!-- Sign In Button -->
+                <Button
+                    android:id="@+id/btnSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Sign In"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                <!--                    android:background="@drawable/btn_gradient_pink"/>-->
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
