@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.admin_mobile_amigo'
+    // MEMPERTAHANKAN SDK 33 AGAR TIDAK ADA KONFLIK DENGAN AGP 7.4.2
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.admin_mobile_amigo"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // KONFIGURASI VIEW BINDING
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    // Dependensi KOTLIN & CORE: DIUBAH KE VERSI YANG COMPATIBLE DENGAN SDK 33
+    // 1.13.1 (SDK 34) -> 1.10.1 (SDK 33)
+    implementation 'androidx.core:core-ktx:1.10.1'
+
+    // Dependensi UI: DIUBAH KE VERSI YANG COMPATIBLE DENGAN SDK 33
+    // 1.7.1 (SDK 34) -> 1.6.1 (SDK 33)
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    // Dependensi MATERIAL DESIGN: DIUBAH KE VERSI YANG COMPATIBLE DENGAN SDK 33
+    // 1.13.0 (SDK 34) -> 1.9.0 (SDK 33)
+    implementation 'com.google.android.material:material:1.9.0'
+
+    // Dependensi CARDVIEW (Tidak ada perubahan versi)
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.core:core-ktx:+'
+    implementation 'androidx.core:core-ktx:+'
+
+    // Dependensi Testing: Diperbarui ke versi stabil yang compatible
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
