@@ -12,5 +12,9 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+<<<<<<< HEAD
 rootProject.name = "Admin_Mobile_Amigo"
+=======
+rootProject.name = "amigo mobile"
+>>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
 include ':app'

@@ -2,7 +2,10 @@
 plugins {
     id 'com.android.application' version '7.4.2' apply false
     id 'com.android.library' version '7.4.2' apply false
+<<<<<<< HEAD
 
     // PERBAIKAN: Versi Kotlin dinaikkan ke 1.9.22 (atau lebih tinggi)
     id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+=======
+>>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
 }
