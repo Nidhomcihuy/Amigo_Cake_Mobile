@@ -1,3 +1,7 @@
 <resources>
+<<<<<<< HEAD
+    <string name="app_name">Admin_Mobile_Amigo</string>
+=======
     <string name="app_name">amigo mobile</string>
+>>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
 </resources>

@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+<<<<<<< HEAD
+    <color name="blue_primary">#4D7DFB</color>
+    <color name="red_production">#F44336</color>
+    <color name="blue_sky">#87CEEB</color>
+    <color name="dark_blue">#191970</color>
+=======
+>>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
 </resources>
