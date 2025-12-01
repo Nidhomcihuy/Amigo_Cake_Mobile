@@ -4,9 +4,20 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+<<<<<<< HEAD
         <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+=======
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+        <option name="gradleHome" value="$PROJECT_DIR$/../Documents/gradle-8.14" />
+=======
+        <option name="gradleJvm" value="Embedded JDK" />
+>>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />

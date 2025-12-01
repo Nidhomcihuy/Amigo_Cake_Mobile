@@ -13,8 +13,12 @@
         android:layout_width="130dp"
         android:layout_height="110dp"
         android:layout_marginTop="64dp"
+<<<<<<< HEAD
         android:contentDescription="Amigo Logo"
         android:src="@drawable/amigo_logo"
+=======
+        app:srcCompat="@drawable/amigo_logo"
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
         app:layout_constraintBottom_toTopOf="@+id/text_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -68,6 +72,7 @@
             android:id="@+id/logohome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:contentDescription="Home Icon"
             android:src="@drawable/home"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -75,39 +80,71 @@
             app:layout_constraintEnd_toStartOf="@+id/logotopic"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent" />
+=======
+            app:srcCompat="@drawable/home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logotopic"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
 
         <ImageView
             android:id="@+id/logotopic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:contentDescription="Topic Icon"
             android:src="@drawable/topic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/logolist"
             app:layout_constraintStart_toEndOf="@+id/logohome" />
+=======
+            app:srcCompat="@drawable/topic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logolist"
+            app:layout_constraintStart_toEndOf="@+id/logohome"
+            app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
 
         <ImageView
             android:id="@+id/logolist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:contentDescription="List Order Icon"
             android:src="@drawable/listorder"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/logobuku"
             app:layout_constraintStart_toEndOf="@+id/logotopic" />
+=======
+            app:srcCompat="@drawable/listorder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logobuku"
+            app:layout_constraintStart_toEndOf="@+id/logotopic"
+            app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
 
         <ImageView
             android:id="@+id/logobuku"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:contentDescription="Book Icon"
             android:src="@drawable/logobuku"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/logolist" />
+=======
+            app:srcCompat="@drawable/logobuku"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/logolist"
+            app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

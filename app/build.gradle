@@ -1,11 +1,20 @@
 plugins {
+<<<<<<< HEAD
     // Mempertahankan kedua plugin yang penting:
     id 'com.android.application'
     id 'com.google.gms.google-services'
+=======
+    id 'com.android.application'
+<<<<<<< HEAD
+    id 'com.google.gms.google-services' // <-- BARIS INI DITAMBAHKAN (untuk Google Services Plugin)
+=======
+<<<<<<< HEAD
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
+<<<<<<< HEAD
     namespace 'com.mobile.amigomobile'
 
     // PERBAIKAN 1: NAIKKAN SDK KE 34 (Karena Navigation dan Core-KTX > 1.10.1 memerlukannya)
@@ -16,16 +25,47 @@ android {
         minSdk 24
         // PERBAIKAN 2: NAIKKAN TARGET SDK KE 34
         targetSdk 34
+=======
+    namespace 'com.example.admin_mobile_amigo'
+    // MEMPERTAHANKAN SDK 33 AGAR TIDAK ADA KONFLIK DENGAN AGP 7.4.2
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.admin_mobile_amigo"
+=======
+>>>>>>> 8676b5b14bcbc9b0d66675f60cd6e4c3d96206a7
+}
+
+android {
+    namespace 'com.mobile.amigomobile'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.mobile.amigomobile"
+>>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
+        minSdk 24
+        targetSdk 33
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // KONFIGURASI VIEW BINDING
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
     buildFeatures {
         viewBinding true
     }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
     buildTypes {
         release {
             minifyEnabled false
@@ -36,12 +76,17 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
     kotlinOptions {
         jvmTarget = '1.8'
     }
 }
 
 dependencies {
+<<<<<<< HEAD
 
     // --- DEPENDENSI UMUM ---
 
@@ -88,4 +133,54 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+=======
+    // Dependensi KOTLIN & CORE: DIUBAH KE VERSI YANG COMPATIBLE DENGAN SDK 33
+    // 1.13.1 (SDK 34) -> 1.10.1 (SDK 33)
+    implementation 'androidx.core:core-ktx:1.10.1'
+
+    // Dependensi UI: DIUBAH KE VERSI YANG COMPATIBLE DENGAN SDK 33
+    // 1.7.1 (SDK 34) -> 1.6.1 (SDK 33)
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    // Dependensi MATERIAL DESIGN: DIUBAH KE VERSI YANG COMPATIBLE DENGAN SDK 33
+    // 1.13.0 (SDK 34) -> 1.9.0 (SDK 33)
+    implementation 'com.google.android.material:material:1.9.0'
+
+    // Dependensi CARDVIEW (Tidak ada perubahan versi)
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.core:core-ktx:+'
+    implementation 'androidx.core:core-ktx:+'
+
+    // Dependensi Testing: Diperbarui ke versi stabil yang compatible
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+=======
+}
+
+dependencies {
+
+    // Dependensi yang sudah ada
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+
+    // --- PENAMBAHAN UNTUK FIREBASE SSO ---
+
+    // 1. Import Firebase Bill of Materials (BoM) untuk manajemen versi
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0")) // <-- BARIS INI DITAMBAHKAN
+
+    // 2. Dependensi untuk Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth' // <-- BARIS INI DITAMBAHKAN
+
+    // 3. Dependensi untuk Google Sign-In (Diperlukan untuk SSO via Google)
+    implementation 'com.google.android.gms:play-services-auth:20.7.0' // <-- BARIS INI DITAMBAHKAN
+
+    // --- AKHIR PENAMBAHAN ---
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+>>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
 }
