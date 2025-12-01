@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1081309510770",
+    "project_id": "amigocakepbl-d7b9b",
+    "storage_bucket": "amigocakepbl-d7b9b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081309510770:android:415f4830463e37bc6896eb",
+        "android_client_info": {
+          "package_name": "com.mobile.amigomobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGRM91LUp2lLT6ppMQo2bK_Mg8d2XuyLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,28 @@
+// Konfigurasi Repositori untuk Plugins (pluginManagement)
+// Ini adalah tempat Gradle mencari plugin, seperti 'com.android.application'.
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+// Konfigurasi Repositori untuk Dependencies (dependencyResolutionManagement)
+// Ini adalah tempat Gradle mencari library yang digunakan oleh modul (seperti app).
+dependencyResolutionManagement {
+    // Mode ini memaksa modul untuk mendeklarasikan repositori mereka sendiri,
+    // tetapi kita men-settingnya di sini untuk seluruh project.
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Deklarasi Nama Root Project
+rootProject.name = "Admin_Mobile_Amigo"
+
+// Deklarasi Modul yang Disertakan
+// ':app' adalah modul utama Anda.
+include ':app'
