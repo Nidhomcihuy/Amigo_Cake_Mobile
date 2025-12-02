@@ -12,30 +12,11 @@ buildscript {
 }
 
 plugins {
-    id 'com.android.application' version '7.4.2' apply false
-    id 'com.android.library' version '7.4.2' apply false
-<<<<<<< HEAD
+    // UBAH VERSI AGP DI SINI:
+    id 'com.android.application' version '8.1.0' apply false
+    id 'com.android.library' version '8.1.0' apply false
 
-    // PERBAIKAN: Versi Kotlin dinaikkan ke 1.9.22 (atau lebih tinggi)
-    // PASTIKAN VERSION NUMBER INI SESUAI DENGAN VERSI KOTLIN YANG ANDA INGINKAN
     id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
 }
 
-// *** TIDAK BOLEH ADA BLOK REPOSITORI LAIN DI SINI (misalnya allprojects) ***
-// *** TIDAK BOLEH ADA BLOK dependencyResolutionManagement DI SINI ***
-=======
-<<<<<<< HEAD
-}
-
-// *** TIDAK BOLEH ADA BLOK REPOSITORI LAIN DI SINI (misalnya allprojects) ***
-// *** TIDAK BOLEH ADA BLOK dependencyResolutionManagement DI SINI ***
-=======
-<<<<<<< HEAD
-
-    // PERBAIKAN: Versi Kotlin dinaikkan ke 1.9.22 (atau lebih tinggi)
-    id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
-=======
->>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
-}
->>>>>>> 8676b5b14bcbc9b0d66675f60cd6e4c3d96206a7
->>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
+// Catatan: Pastikan di luar blok ini tidak ada kode yang tidak perlu (seperti allprojects, dll.)
