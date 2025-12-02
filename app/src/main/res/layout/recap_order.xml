@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homebg"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonMonthPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="460dp"
+        android:backgroundTint="@android:color/white"
+
+        android:drawableEnd="@drawable/panahbawahrecap"
+        android:drawablePadding="8dp"
+        android:drawableTint="@android:color/black"
+        android:paddingVertical="12dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="16dp"
+        android:text="Bulan ini"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="10sp"
+
+        app:cornerRadius="24dp"  app:strokeColor="#DDDDDD" app:strokeWidth="1dp"     app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="-200dp"
+        android:contentDescription="Amigo Logo"
+        android:src="@drawable/amigo_logo"
+
+        app:layout_constraintBottom_toTopOf="@+id/text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="215dp"
+        android:text="Recap Order"
+        android:textSize="30sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/menu_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" /> <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/menu_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/kotakbawah1"
+    android:paddingStart="24dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="12dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <ImageView
+        android:id="@+id/logohome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Home Icon"
+        android:src="@drawable/homeputih"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/logotopic"
+        app:layout_constraintHorizontal_chainStyle="spread_inside" />
+    <ImageView
+        android:id="@+id/logotopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Topic Icon"
+        android:src="@drawable/topicmerah"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logohome"
+        app:layout_constraintEnd_toStartOf="@+id/logolist" />
+
+    <ImageView
+        android:id="@+id/logolist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="List Order Icon"
+        android:src="@drawable/listorder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logotopic"
+        app:layout_constraintEnd_toStartOf="@+id/logobuku" />
+
+    <ImageView
+        android:id="@+id/logobuku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Book Icon"
+        android:src="@drawable/logobuku"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logolist"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,31 @@
 plugins {
+<<<<<<< HEAD
+    // Mempertahankan kedua plugin yang penting:
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+=======
     id 'com.android.application'
 <<<<<<< HEAD
     id 'com.google.gms.google-services' // <-- BARIS INI DITAMBAHKAN (untuk Google Services Plugin)
 =======
 <<<<<<< HEAD
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
+<<<<<<< HEAD
+    namespace 'com.mobile.amigomobile'
+
+    // PERBAIKAN 1: NAIKKAN SDK KE 34 (Karena Navigation dan Core-KTX > 1.10.1 memerlukannya)
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.mobile.amigomobile"
+        minSdk 24
+        // PERBAIKAN 2: NAIKKAN TARGET SDK KE 34
+        targetSdk 34
+=======
     namespace 'com.example.admin_mobile_amigo'
     // MEMPERTAHANKAN SDK 33 AGAR TIDAK ADA KONFLIK DENGAN AGP 7.4.2
     compileSdk 33
@@ -27,6 +45,7 @@ android {
 >>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
         minSdk 24
         targetSdk 33
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
         versionCode 1
         versionName "1.0"
 
@@ -34,13 +53,19 @@ android {
     }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     // KONFIGURASI VIEW BINDING
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
     buildFeatures {
         viewBinding true
     }
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
     buildTypes {
         release {
             minifyEnabled false
@@ -52,12 +77,63 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
     kotlinOptions {
         jvmTarget = '1.8'
     }
 }
 
 dependencies {
+<<<<<<< HEAD
+
+    // --- DEPENDENSI UMUM ---
+
+    // PERBAIKAN 3: Gunakan versi Core-KTX yang lebih baru yang kompatibel dengan SDK 34
+    implementation 'androidx.core:core-ktx:1.13.0'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // PERBAIKAN 4: RecyclerView versi yang lebih rendah untuk kompatibilitas dengan AGP 7.4.2 atau setidaknya versi 1.3.2 jika tidak mau ke 1.4.0 (yang memerlukan SDK 35)
+    // Jika Anda TIDAK bisa update AGP, turunkan ke versi 1.3.2
+    // implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    // Jika Anda sudah mencoba versi 1.4.0 yang bermasalah, gunakan versi stabil terbaru yang tidak bermasalah:
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+
+
+    // --- DEPENDENSI ARSITEKTUR ANDROID ---
+
+    // Lifecycle components (ViewModel, LiveData, Runtime) - Versi 2.6.2 harus baik-baik saja
+    def lifecycle_version = "2.6.2"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+    // Navigation Component - Versi 2.7.5 memerlukan SDK 34 (Sudah diubah di atas)
+    def nav_version = "2.7.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // --- DEPENDENSI FIREBASE SSO ---
+
+    // 1. Firebase Bill of Materials (BoM)
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+
+    // 2. Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth'
+
+    // 3. Google Sign-In
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+
+    // --- DEPENDENSI TESTING ---
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+=======
     // Dependensi KOTLIN & CORE: DIUBAH KE VERSI YANG COMPATIBLE DENGAN SDK 33
     // 1.13.1 (SDK 34) -> 1.10.1 (SDK 33)
     implementation 'androidx.core:core-ktx:1.10.1'
@@ -106,4 +182,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.3.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
 >>>>>>> ade1343cb1af31c43d529594a0d95e425822c49f
+>>>>>>> 0651cba6431894628fdc29af39e1e02667b3cff0
 }
