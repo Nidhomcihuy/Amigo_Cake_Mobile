@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- PERBAIKAN UTAMA: Tambahkan Izin Internet untuk koneksi Firebase (Auth & Firestore) -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,14 +13,52 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AmigoMobile"
         tools:targetApi="31">
-
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <!-- ========================================================== -->
+        <!-- ACTIVITY UTAMA & NAVIGASI BAWAH -->
+        <!-- ========================================================== -->
+        <!-- Order Manual / Home (logohome) -->
+        <activity
+            android:name=".OrderManualActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" /> <!-- Order Recap (logotopic) -->
+        <activity
+            android:name=".OrderRecapActivity"
+            android:exported="false" /> <!-- Order List (logolist) -->
+        <activity
+            android:name=".OrderListActivity"
+            android:exported="false" /> <!-- HomeActivity (Jika ini adalah halaman utama selain OrderManualActivity) -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" /> <!-- ========================================================== -->
+        <!-- ACTIVITY OTENTIKASI & LAINNYA -->
+        <!-- ========================================================== -->
+        <!-- LoginActivity (Halaman Pembuka/Launcher) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- RegisterActivity (Halaman Pendaftaran) -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" /> <!-- Activity Lain (Ditinggalkan di sini jika masih diperlukan) -->
+        <activity
+            android:name=".TopicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManualOrderActivity"
+            android:exported="false" />
     </application>
+
 </manifest>

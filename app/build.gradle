@@ -1,31 +1,37 @@
 plugins {
-    // Mempertahankan semua plugin yang diperlukan
     id 'com.android.application'
-    id 'com.google.gms.google-services'
     id 'org.jetbrains.kotlin.android'
+    // TAMBAHKAN PLUGIN GOOGLE SERVICES DI SINI:
+    id 'com.google.gms.google-services'
+    // Versi BoM sudah diatur di project-level gradle, jadi hapus versi di sini jika Anda menggunakan AGP terbaru.
+    // Jika Anda TIDAK mengatur versi di project-level gradle, pastikan untuk tetap menyertakan versi: version '4.4.1'
 }
 
+// Konfigurasi modul aplikasi
 android {
-    // Mempertahankan namespace yang benar
+    // TAMBAHKAN KEMBALI BARIS INI UNTUK MEMPERBAIKI ERROR 'NAMESPACE NOT SPECIFIED'
     namespace 'com.mobile.amigomobile'
 
-    // DIUBAH DARI 34 KE 33 UNTUK KOMPATIBILITAS AGP 7.4.2
-    compileSdk 33
+    compileSdk 34
+
+    // Konfigurasi untuk menekan peringatan kompatibilitas compileSdk (Opsional, tapi direkomendasikan jika menggunakan AGP lama)
+    // Walaupun AGP Anda 7.4.2 (lama), biarkan saja dulu karena Anda sudah mengatur compileSdk 34.
 
     defaultConfig {
         applicationId "com.mobile.amigomobile"
         minSdk 24
-        // DIUBAH DARI 34 KE 33
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    // KONFIGURASI BUILD FEATURES (untuk View Binding)
+    // Build Features Configuration
     buildFeatures {
         viewBinding true
+        // Data Binding juga bisa ditambahkan jika Anda berencana menggunakannya
+        // dataBinding true
     }
 
     buildTypes {
@@ -34,49 +40,71 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    // Java/Kotlin Compatibility
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17 // Rekomendasi untuk versi Kotlin terbaru
+        targetCompatibility JavaVersion.VERSION_17 // Rekomendasi untuk versi Kotlin terbaru
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17' // Sesuaikan dengan compileOptions
     }
 }
 
 dependencies {
 
+    // --- Versi Dependensi Didefinisikan di Sini (Gaya Groovy) ---
+    def lifecycle_version = "2.7.0"
+    def nav_version = "2.7.5"
+    def chart_version = "3.1.0"
+
+    // Versi Core dan Appcompat yang lebih baru (Optional, tapi lebih baik)
+    def core_ktx_version = "1.12.0"
+    def appcompat_version = "1.6.1"
+    def material_version = "1.11.0"
+
+
+    // 1. Firebase Bill of Materials (BoM) - UNTUK MENGATUR VERSI FIREBASE
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+
+
     // --- DEPENDENSI UMUM ---
-    // implementation 'androidx.core:core-ktx:1.13.0' // Versi ini memerlukan SDK 34
-    implementation 'androidx.core:core-ktx:1.10.1' // DIUBAH KE VERSI YANG KOMPATIBEL DENGAN SDK 33
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation "androidx.core:core-ktx:$core_ktx_version" // Menggunakan variabel
+    implementation "androidx.appcompat:appcompat:$appcompat_version" // Menggunakan variabel
+    implementation "com.google.android.material:material:$material_version" // Menggunakan variabel
+
+    // Tetap menggunakan versi stabil yang Anda definisikan
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
 
+    // --- DEPENDENSI CHART DINAMIS (Penting untuk visualisasi rekap) ---
+    implementation "com.github.PhilJay:MPAndroidChart:$chart_version"
+    // Pastikan Anda telah menambahkan 'maven { url 'https://jitpack.io' }' di file settings.gradle Anda.
+
     // --- DEPENDENSI ARSITEKTUR ANDROID ---
 
     // Lifecycle components (ViewModel, LiveData, Runtime)
-    def lifecycle_version = "2.6.2"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 
     // Navigation Component
-    def nav_version = "2.7.5"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
-    // --- DEPENDENSI FIREBASE SSO ---
+    // --- DEPENDENSI FIREBASE & GOOGLE SERVICES (VERSINYA DIATUR OLEH BoM DI ATAS) ---
 
-    // 1. Firebase Bill of Materials (BoM)
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    // Firebase Authentication (Kotlin KTX)
+    implementation 'com.google.firebase:firebase-auth-ktx'
 
-    // 2. Firebase Authentication
-    implementation 'com.google.firebase:firebase-auth'
+    // FIREBASE FIRESTORE (Database untuk data rekap dan chart) (Kotlin KTX)
+    implementation 'com.google.firebase:firebase-firestore-ktx'
 
-    // 3. Google Sign-In
-    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    // Google Sign-In / SSO (play-services-auth)
+    // Versi 21.0.0 sudah cukup stabil.
+    implementation 'com.google.android.gms:play-services-auth:21.0.0'
+
 
     // --- DEPENDENSI TESTING ---
     testImplementation 'junit:junit:4.13.2'
